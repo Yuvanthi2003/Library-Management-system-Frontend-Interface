@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <style>
+      .grid-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+      }
+
+      .grid-item {
+          border: 1px solid #ddd;
+          padding: 10px;
+          text-align: center;
+      }
+
+      img {
+          max-width: 100%;
+          height: auto;
+      }
+
+      p {
+          margin-top: 10px;
+      }
+      h1{
+        text-align: center;
+      }
+      
+  </style>
+    
+    <title>Library Management System Front-end interface</title>
+  </head>
+
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Online Library</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+    <div id="alertuser"></div>
+
+    <div class="container my-3">
+      <h1>Welcome to My Library</h1>
+      <hr />
+      <form id="mylibraryform">
+        <div class="form-group">
+          <label for="exampleInputEmail1">User Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="User-Name"
+            aria-describedby="emailHelp"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your user name with anyone else.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Book Name</label>
+          <input type="text" class="form-control" id="Book-Name" />
+        </div>
+        <div class="form-group">
+          <label for="bookType">Book Type</label>
+          <div class="check-boxes my-3 mx-5">
+            <div class="form-check p-2">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="check-box"
+                id="Fiction"
+                value="Fiction"
+              />
+              <label class="form-check-label" for="Fiction"> Fiction </label>
+            </div>
+            <div class="form-check p-2">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="check-box"
+                id="Programing"
+                value="Programing"
+              />
+              <label class="form-check-label" for="Programing">
+                Programing
+              </label>
+            </div>
+            <div class="form-check p-2">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="check-box"
+                id="Cooking"
+                value="Cooking"
+              />
+              <label class="form-check-label" for="Cooking"> Cooking </label>
+            </div>
+            <div class="form-check p-2">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="check-box"
+                id="Funny"
+                value="Funny"
+              />
+              <label class="form-check-label" for="Funny"> Funny </label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-outline-dark">Add Book</button>
+      </form>
+      <table class="table table-dark my-3">
+        <thead>
+          <tr>
+            <th scope="col">Sl No.</th>
+            <th scope="col">Date of issue</th>
+            <th scope="col">Reader</th>
+            <th scope="col">Book Name</th>
+            <th scope="col">Genre</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div><br><br><br>
+    <h1>Available Books that are ready to read online</h1><br><br>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="book1.jpg" alt="It ends with us">
+            <p>The newest, highly anticipated novel from beloved #1 New York Times bestselling author, Colleen Hoover <a href="book1.html">Read More</a></p>
+        </div>
+        <div class="grid-item">
+            <img src="book2.jpg" alt="Fourth Wing ">
+            <p>Twenty-year-old Violet Sorrengail was supposed to enter the Scribe Quadrant, living a quiet life among books and history. <a href="book2.html">Read More</a></p>
+        </div>
+        <div class="grid-item">
+            <img src="book3.jpg" alt="Rich dad,Poor dad">
+            <p>Rich Dad Poor Dad is Robert's story of growing up with two dads — his real father and the father of his best friend, 
+              <a href="book3.html">Read More</a></p>
+        </div>
+        <!-- Add more books with descriptions and links as needed -->
+        <div class="grid-item">
+            <img src="book4.jpg" alt="It starts with us">
+            <p>Lily and her ex-husband, Ryle, have just settled into a civil coparenting rhythm when she suddenly bumps into her first love, Atlas, again.  <a href="book4.html">Read More</a></p>
+        </div>
+        <div class="grid-item">
+            <img src="book5.jpg" alt="The Fault in Our Stars">
+            <p> As a young adult fiction novel, ‘The Fault in Our Stars’ combines grief, love, and literature to create an interestingly relatable story. <a href="book5.html">Read More</a></p>
+        </div>
+        <div class="grid-item">
+            <img src="book6.jpg" alt="Shatter me">
+            <p>One touch is all it takes. One touch, and Juliette Ferrars can leave a fully grown man gasping for air. One touch, and she can kill.<a href="book6.html">Read More</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
